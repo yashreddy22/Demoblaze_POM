@@ -1,0 +1,12 @@
+src->Pages->Home_page_locators.py\
+
+class Home_page_Locators(object):
+	home_button="//a[@class='nav-link']//button[0]"
+	contact_button="//a[@class='nav-link']//button[1]"
+	about_us_button="//a[@class='nav-link']//button[2]"
+	cart_button="//a[@ID='cartur']"
+	login_button="//a[@ID='login2']"
+	sign_up_button="//a[@ID='signin2']"
+	phone_category="//a[@ID='itemc']//button[0]"
+	laptop_category="//a[@ID='itemc']//button[1]"
+	monitor_category="//a[@ID='itemc']//button[2]"

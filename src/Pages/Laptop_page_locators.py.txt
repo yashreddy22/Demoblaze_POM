@@ -1,0 +1,11 @@
+src->Pages->Laptop_page_locators.py\
+
+class Laptop_page_Locators(object):
+	home_button="//a[@class='nav-link']//button[0]"
+	contact_button="//a[@class='nav-link']//button[1]"
+	about_us_button="//a[@class='nav-link']//button[2]"
+	cart_button="//a[@ID='cartur']"
+	login_button="//a[@ID='login2']"
+	sign_up_button="//a[@ID='signin2']"
+	laptops_list="//a[@class='hrefch']"
+

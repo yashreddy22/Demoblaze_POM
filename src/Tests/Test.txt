@@ -1,0 +1,32 @@
+Select Laptop category, select 5th item --> click on Add to Cart --> Validate the message displayed in the popup saying product Added --> click ok
+--> Go to Cart and Verify what ever the product added is present in the cart 
+
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
+from src.Pages.Home_page import Home_page
+from src.Pages.Laptop_page import Laptop_page
+from src.Pages.Product_page import Product_page
+
+driver = webdriver.Chrome()
+driver.get('https://www.demoblaze.com/')
+time.sleep(2)
+Home_page.laptop_category.click()
+time.sleep(2)
+
+fifth.laptop=Laptop_page.laptops_list[4].click()
+fifth_laptop_name=fifth_laptop.text
+time.sleep(2)
+
+Product_page.add_to_cart_button.click()
+
+
+time.sleep(2)
+driver.switchTo().alert().accept()
+
+Product_page.add_to_cart_button.click()
+time.sleep(2)
+
+cart_item_name=driver.find_element(By.XPATH,"//tbody//tr//td[2]").text
+assert cart_item_name==fifth_laptop_name, 'Different laptop is added to the cart'

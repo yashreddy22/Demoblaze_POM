@@ -1,0 +1,19 @@
+from selenium.webdriver.common.by import By
+from src.Pages.Home_page_locator import Home_page_locator
+from selenium import webdriver
+
+class Home_page(object):
+
+	def __init__(self,driver):
+		self.driver=driver
+		self.home_button=driver.find_element(By.XPATH,Home_page_locator.home_buttom)
+		self.contact_button=driver.find_element(By.XPATH,'Home_page_locator.contact_button)
+		self.about_us_button=driver.find_element(By.XPATH,Home_page_locator.about_us_button)
+		self.cart_button=driver.find_element(By.XPATH,Home_page_locator.cart_button)
+		self.login_button=driver.find_element(By.XPATH,Home_page_locator.login_button)
+		self.sign_up_button=driver.find_element(By.XPATH,Home_page_locator.sign_up_button)
+		self.phone_category=driver.find_element(By.XPATH,Home_page_locator.phone_category)
+		self.laptop_category=driver.find_element(By.XPATH,Home_page_locator.laptop_category)
+		self.monitor_category=driver.find_element(By.XPATH,Home_page_locator.monitor_category)
+
+	def 
